@@ -228,3 +228,36 @@ instructions on how to override the default IAM configuration.
 [edugain]: https://edugain.org/
 [application-saml]: https://raw.githubusercontent.com/indigo-iam/iam/{{< param version >}}/iam-login-service/src/main/resources/application-saml.yml
 
+
+## Registration form: filling information from IdP
+
+The first time a user authenticates in IAM instance, the account creation form will be displayed. It is possible to request
+that some of the fields are filled with the value of an IdP attribute and to define that some of these fields are read-only,
+i.e. that the value provided by the IdP cannot be changed.
+
+To enable filling the creation form with values provided by the IdP, you need to create a YAML file in `/indigo-iam/config`, for example
+`/indigo-iam/config/application-registration.yaml`. The contents should be something similar to:
+
+```
+iam:
+  registration:
+    fields:
+      email:
+        read-only: false
+        external-auth-attribute: email
+      name:
+        read-only: false
+        external-auth-attribute: given_name
+      surname:
+        read-only: false
+        external-auth-attribute: family_name
+      username:
+        read-only: false
+        external-auth-attribute: preferred_username 
+```
+
+`read-only` can be set to `true` if you want to prevent that the  value provided supplied by the ID is modified by the user.
+**Note that if a field is defined as read-only and now value is provided
+by the IdP, it may result that the user cannot submit the account creation form if the field is required.**
+
+`external-auth-attribue` must be the name of the IdP attribute to use for the mentioned account creation form field.
