@@ -86,6 +86,29 @@ when it is required.**
 `external-auth-attribue` must be the name of the IdP attribute, or token claim (when provided by SAML IdPs,
 or OIDC Providers, respectively) to use for the mentioned account creation form field.
 
+
+## Automatic enrollment trough SAML IdPs
+
+In case of registration trough an external SAML Identity Provider, IAM offers
+a flexible user enrollment flow, also without IAM admin intervention. The default IAM
+behavior is that the user enrollment requires an administrator approval step.
+
+In order to enable an automatic enrollment flow trough an external IdP, one
+should set the following properties, under the `saml` hierarchy:
+
+```yaml
+saml:
+  jit-account-provisioning:
+    enabled: true
+    # this will consider as trusted all the IdPs declared in your
+    # application-saml.yml file
+    trusted-idps: all
+```
+
+In order to directly declare the list of trusted SAML IdPs, a comma separated list of
+entity IDs have to be set, e.g. `saml.jit-account-provisioning.trusted-idps=idp1,idp2,idp3`.
+
+
 ## User editable fields
 
 Starting with version 1.6.0, IAM allows to limit which fields of the user profile are editable by users.
@@ -110,26 +133,5 @@ To prevent modifications to any of the fields remove the field name from
 External configuration can be managed by placing directives as shown above in a
 [custom configuration
 file][custom-config-file]
-
-## Automatic enrollment trough SAML IdPs
-
-In case of registration trough an external SAML Identity Provider, IAM offers
-a flexible user enrollment flow, also without IAM admin intervention. The default IAM
-behavior is that the user enrollment requires an administrator approval step.
-
-In order to enable an automatic enrollment flow trough an external IdP, one
-should set the following properties, under the `saml` hierarchy:
-
-```yaml
-saml:
-  jit-account-provisioning:
-    enabled: true
-    # this will consider as trusted all the IdPs declared in your
-    # application-saml.yml file
-    trusted-idps: all
-```
-
-In order to directly declare the list of trusted SAML IdPs, a comma separated list of
-entity IDs have to be set, e.g. `saml.jit-account-provisioning.trusted-idps=idp1,idp2,idp3`.
 
 [custom-config-file]: {{< ref "/docs/reference/configuration/#overriding-default-configuration-templates" >}}
