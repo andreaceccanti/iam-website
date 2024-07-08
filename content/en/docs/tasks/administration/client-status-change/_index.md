@@ -2,11 +2,11 @@
 title: Disable or Enable a client
 weight: 2
 ---
-Existing clients can be disabled or enabled by admin user from dashboard.
+Existing clients can be disabled or enabled by Administrator from dashboard.
 
 ## Disabling a client using the dashboard
 
-Log into the service using admin credential and click on the _Clients_ link on the left
+Log into the service using admin credentials and click on the _Clients_ link on the left
 navigation bar:
 
 ![dashboard](../images/client-status-change-1.png)
@@ -27,4 +27,4 @@ On success you will get a confirmation message and the _Disable Client_ button w
 
 ![disable client confirmation](../images/client-status-change-5.png)
 
-Using _Restore Client_ button client's status can be change back to _Active_.
+Using _Restore Client_ button client status can be changed back to _Active_.
