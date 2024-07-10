@@ -2,14 +2,14 @@
 title: Re-sign AUP
 weight: 2
 ---
-Users can re-sign AUP at any time
+Users can re-sign AUP at any time.
 ## Re-sign AUP using the dashboard
 
 Log into the service using user credentials:
 
 ![dashboard](../images/re-sign-aup-1.png)
 
-To re-sign AUP click on _Re-sign AUP_ button
+To re-sign AUP click on _Re-sign AUP_ button:
 
 ![re-sign aup button](../images/re-sign-aup-2.png)
 

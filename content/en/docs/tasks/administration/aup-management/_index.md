@@ -85,7 +85,7 @@ or at the first login after the AUP creation:
 
 ## Request AUP signature
 
-Administrator can request user to sign AUP
+Administrator can request user to sign AUP.
 
 Administrator privileges are required.
 
@@ -109,11 +109,11 @@ On success you will get a confirmation message:
 
 ![request AUP signature confirmation](../images/request-aup-signature-5.png)
 
-After this operation if the user login, the user need to sign the AUP again before accessing the service.
+After this operation, if the user logs in, they must sign the AUP again before accessing the service.
 
 ## Sign AUP on behalf of the user
 
-Administrator can sign AUP on behalf of the user
+Administrator can sign AUP on behalf of the user.
 
 Log into the service using admin credentials and click on the _Users_ link on the left navigation bar:
 
