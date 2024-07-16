@@ -398,16 +398,16 @@ IAM_CLIENT_REGISTRATION_ALLOW_FOR=ANYONE
 IAM_CLIENT_REGISTRATION_ENABLE=true
 # Set the default validity in seconds of an AT requested by any newly registered client.
 # Default is 1 hour, but it can be changed per client
-DEFAULT_ACCESS_TOKEN_VALIDITY_SECONDS=3600
+IAM_DEFAULT_ACCESS_TOKEN_VALIDITY_SECONDS=3600
 # Set the default validity in seconds of a device code requested by any newly registered client.
 # Default is 10 minutes, but it can be changed per client
-DEFAULT_DEVICE_CODE_VALIDITY_SECONDS=600
+IAM_DEFAULT_DEVICE_CODE_VALIDITY_SECONDS=600
 # Set the default validity in seconds of an ID token requested by any newly registered client.
 # Default is 10 minutes, but it can be changed per client
-DEFAULT_ID_TOKEN_VALIDITY_SECONDS=600
+IAM_DEFAULT_ID_TOKEN_VALIDITY_SECONDS=600
 # Set the default validity in seconds of an RT requested by any newly registered client.
 # Default is 30 days, but it can be changed per client
-DEFAULT_REFRESH_TOKEN_VALIDITY_SECONDS=2592000
+IAM_DEFAULT_REFRESH_TOKEN_VALIDITY_SECONDS=2592000
 ```
 
 ## Client lifecycle
