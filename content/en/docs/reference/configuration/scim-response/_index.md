@@ -8,13 +8,12 @@ IAM already supports a set of [SCIM APIs](../../api/scim-api/_index.md) based on
 Identity Management standard. Starting from IAM v1.9.0, the API response to GET requests on user details
 (i.e. `/scim/Me` and `/scim/Users`) are extended with more information.
 All the new details are included into the _IndigoUser_ field.
-To maintain backward compatibility, in order to enable this feature,
-dedicated properties (or environment variable) need to be enabled.
+To enable this feature, dedicated properties (or environment variables) must be used to maintain backward compatibility.
 
 The list of information that may be included into the SCIM response are:
 
 * user's autorities
-* set of managed groups
+* set of user-managed groups
 * set of user's attributes.
 
 
@@ -30,7 +29,7 @@ scim:
 
 or the environment variable `IAM_SCIM_INCLUDE_AUTHORITIES=true`.
 
-Then, an example of SCIM me output for an administrator user is the following:
+Then, an example of SCIM Me output for an administrator user is the following:
 
 ```
 {
@@ -59,7 +58,7 @@ Then, an example of SCIM me output for an administrator user is the following:
 
 ### Managed groups
 
-In order to include the list of user's managed groups into the SCIM response,
+In order to include the list of user-managed groups into the SCIM response,
 one should set the following property (default is false):
 
 ```yaml
@@ -69,7 +68,7 @@ scim:
 
 or the environment variable `IAM_SCIM_INCLUDE_MANAGED_GROUPS=true`.
 
-Then, an example of SCIM me output for a group manager is the following:
+Then, an example of SCIM Me output for a group manager is the following:
 
 ```
 {
@@ -115,7 +114,7 @@ scim:
   - name: another-attribute-name
 ```
 
-Then, an example of SCIM me output for an IAM user is the following:
+Then, an example of SCIM Me output for an IAM user is the following:
 
 ```
 {
