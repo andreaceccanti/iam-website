@@ -390,6 +390,12 @@ IAM_ACCOUNT_LINKING_DISABLE=false
 
 ## Client registration
 
+Those variables allow to configure how to register a new client and
+the related default settings.
+
+For more information see the [Client registration
+section]({{< ref "/docs/reference/configuration/client-registration" >}}).
+
 ```bash
 # Specifies who can register a client. Default is anyone, so also not registered users.
 # Other possible values are: REGISTERED_USERS and ADMINISTRATORS
