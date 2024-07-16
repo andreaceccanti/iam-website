@@ -85,13 +85,13 @@ when it is required.**
 or OIDC Providers, respectively) to use for the mentioned account creation form field.
 
 
-## Automatic enrollment trough SAML IdPs
+## Automatic enrollment through SAML IdPs
 
-In case of registration trough an external SAML Identity Provider, IAM offers
+In case of registration through an external SAML Identity Provider, IAM offers
 a flexible user enrollment flow, also without IAM admin intervention. The default IAM
 behavior is that the user enrollment requires an administrator approval step.
 
-In order to enable an automatic enrollment flow trough an external IdP, one
+In order to enable the automatic enrollment flow via an external IdP, one
 should set the following properties, under the `saml` hierarchy:
 
 ```yaml
