@@ -22,8 +22,7 @@ A default account validity period (e.g., 12 months) can be configured and will
 be set for users at registration time.
 
 The relevant settings are managed  by placing `lifecycle` directives in a
-[custom configuration
-file][custom-config-file]:
+[custom configuration file][custom-config-file]:
 
 ```yaml
 lifecycle:
@@ -48,5 +47,11 @@ lifecycle:
       enabled: true
 ```
 
+Labels are added to the user homepage to manage expired IAM accounts:
+
+|    label name    |               label value               |                                              meaning                                         |
+|------------------|-----------------------------------------|----------------------------------------------------------------------------------------------|
+| <br> <br> lifecycle.status | PENDING_SUSPENSION <br>  <br> PENDING_REMOVAL <br>  <br> <br> SUSPENDED | added when the user membership expires; indicates that the user is waiting to be suspended <br>  <br> added when the user is suspended AND remove-expired-accounts is set to true; <br> indicates that the user is waiting to be removed <br>  <br> added when the user is suspended AND remove-expired-accounts is set to false |
+| lifecycle.timestamp | _timestamp_                          | the time the user is marked as suspended or pending suspension or removal                    |
 
 [custom-config-file]: {{< ref "/docs/reference/configuration/#overriding-default-configuration-templates" >}}
