@@ -62,6 +62,8 @@ If the AUP signature validity is set to 0, AUP reminders will not be displayed. 
 
 ![Aup creation](../images/aup-created.png)
 
+Based on the screenshot above, the user will receive three AUP signature reminder emails at 30 days, 15 days, and 1 day prior to the expiration date. Additionally, one AUP expiration email will be sent one year after the AUP is signed.
+
 ### Editing and deleting the AUP
 
 The AUP can be edited and deleted from the AUP management page:
