@@ -27,7 +27,7 @@ Management navigation bar):
 
 A dialog is shown:
 
-![AUP management 1](../images/aup1.png)
+![Aup window](../images/aup-window.png)
 
 where the administrator can enter the AUP URL and define how frequently the
 AUP should be accepted by users.
@@ -41,6 +41,28 @@ A positive value in the AUP signature validity means, on the other hand, that
 the signature will expire after that number of days. As an example, an
 administrator that wants the AUP to signed each year by users should put 365 in
 the "AUP signature validity" field.
+
+Since version 1.10.0, a new cron task has been added that runs every four hours to check the expiration status of each user's AUP (Acceptable Usage Policy) signature. If a signature has expired or is about to expire, an email notification is sent to the relevant user.
+
+Administrators can configure AUP reminders, which notify users of the remaining days until their AUP expires. These reminders can be set up directly from the dashboard.
+If the AUP signature validity is set to 0, AUP reminders will not be displayed. If the AUP signature validity is set to a value greater than 0, the AUP reminders will become mandatory.
+
+![Aup reminders](../images/aup-reminders.png)
+
+#### Successful AUP creation criteria
+
+* **Valid AUP URL**
+  * The AUP URL must be a properly formatted, valid URL
+* **AUP signature validity**
+  * The signature validity period (in days) must be an integer value greater than or equal to 0
+* **AUP reminders**
+  * The reminder period(s) (in days) must be one or more numbers, separated by commas if multiple, that satisfy the following conditions:
+    * Each reminder must be greater than 0
+    * Each reminder must be less than the AUP signature validity period
+
+![Aup creation](../images/aup-created.png)
+
+Based on the screenshot above, the user will receive three AUP signature reminder emails at 30 days, 15 days, and 1 day prior to the expiration date. Additionally, one AUP expiration email will be sent one year after the AUP is signed.
 
 ### Editing and deleting the AUP
 
