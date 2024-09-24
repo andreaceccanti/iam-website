@@ -11,13 +11,13 @@ IAM Login Service provides a RESTful API to create and manage certificate linkin
 Create a new certificate linking request.
 The body of the request must contain a JSON with the following parameters:
 
-| Name | Values | Optional or Required | Description |
+| Name | Value | Optional or Required | Description |
 |:------------:|-------------|-------------|-------------|
-| **label**<br/>`string`| A non empty string. | Required | Certificate label. |
-| **pemEncodedCertificate**<br/>`string`| A PEM-encoded string | The PEM string or both the subject and issuer must be present. | Certificate content. |
-| **subjectDn**<br/>`string`| RFC2253-formatted subject DN | The PEM string or both the subject and issuer must be present. | Certificate subject. |
-| **issuerDn**<br/>`string`| One of the known certification authorities, found in the `IAM_X509_TRUST_ANCHORS_DIR` folder. | The PEM string or both the subject and issuer must be present. | Certificate issuer. |
-| **notes**<br/>`string`| Any string | Optional, default is `""`. | A note to the administrator. |
+| **label**<br/>`string`| A non empty string | Required | Certificate label |
+| **pemEncodedCertificate**<br/>`string`| A PEM-encoded string | The PEM string or both the subject and issuer must be present | Certificate content |
+| **subjectDn**<br/>`string`| RFC2253-formatted subject DN | The PEM string or both the subject and issuer must be present | Certificate subject |
+| **issuerDn**<br/>`string`| One of the known certification authorities, found in the `IAM_X509_TRUST_ANCHORS_DIR` folder | The PEM string or both the subject and issuer must be present | Certificate issuer |
+| **notes**<br/>`string`| Any string | Optional, default is `""` | A note to the administrator |
 
 **Response**:
 ```json
@@ -44,13 +44,13 @@ other users only the requests they submitted.
 
 Available parameters:
 
-| Name | Values | Optional or Required | Description |
+| Name | Value | Optional or Required | Description |
 |:------------:|-------------|-------------|-------------|
-| **username**<br/>`string`| A valid username. | Optional | Username of the account who made the request. |
-| **subjectDn**<br/>`string`| RFC2253-formatted subject DN | Optional | Subject of the requested certificate. |
-| **status**<br/>`string`| `PENDING`, `APPROVED`, `REJECTED` | Optional | Status of the request. |
-| **startIndex**<br/>`integer`| [1-n] | 1 | The 1-based index of the first query result. |
-| **count**<br/>`integer`| [0-n] | 10 | The number of results to collect. |
+| **username**<br/>`string`| A valid username | Optional | Username of the account who made the request |
+| **subjectDn**<br/>`string`| RFC2253-formatted subject DN | Optional | Subject of the requested certificate |
+| **status**<br/>`string`| `PENDING`, `APPROVED`, `REJECTED` | Optional | Status of the request |
+| **startIndex**<br/>`integer`| [1-n] | 1 | The 1-based index of the first query result |
+| **count**<br/>`integer`| [0-n] | 10 | The number of results to collect |
 
 **Response**:
 ```json
