@@ -6,7 +6,7 @@ linkTitle: "Certificate linking requests API"
 
 IAM Login Service provides a RESTful API to create and manage certificate linking requests.
 
-## POST /iam/group_requests
+## POST /iam/cert_link_requests
 
 Create a new certificate linking request.
 The body of the request must contain a JSON with the following parameters:
@@ -35,9 +35,9 @@ The body of the request must contain a JSON with the following parameters:
 }
 ```
 
-## GET /iam/group_requests
+## GET /iam/cert_link_requests
 
-Returns a paginated list of group requests.
+Returns a paginated list of certificate linking requests.
 The list can be filtered by username, certificate subject name or request status.
 Users with administrative privileges can list all requests;
 other users only the requests they submitted.
@@ -75,7 +75,7 @@ Available parameters:
 }
 ```
 
-## GET /iam/group_requests/{uuid}
+## GET /iam/cert_link_requests/{uuid}
 
 Returns the details about a certificate linking request.
 
@@ -95,7 +95,7 @@ Returns the details about a certificate linking request.
 }
 ```
 
-## DELETE /iam/group_requests/{uuid}
+## DELETE /iam/cert_link_requests/{uuid}
 
 Deletes a certificate linking request.
 Administrators can delete any request, users can only delete the `PENDING` requests
@@ -103,7 +103,7 @@ they previously submitted.
 
 **Response**: `204 Ok`
 
-## POST /iam/group_requests/{uuid}/approve
+## POST /iam/cert_link_requests/{uuid}/approve
 
 Approves a certificate linking request.
 Only administrators can approve requests.
@@ -124,9 +124,9 @@ Only administrators can approve requests.
 }
 ```
 
-## POST /iam/group_requests/{uuid}/reject?motivation=
+## POST /iam/cert_link_requests/{uuid}/reject?motivation=
 
-Rejects a group request.
+Rejects a certificate linking request.
 A `motivation` parameter is required.
 Only administrators can reject requests.
 
