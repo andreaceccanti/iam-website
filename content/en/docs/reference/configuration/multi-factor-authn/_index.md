@@ -15,6 +15,11 @@ The primary goals of MFA are:
 
 To enable MFA, the `mfa` profile must be configured.
 
+{{% alert title="Warning" color="warning" %}}
+MFA support is experimental and limited.
+In particular, at the moment it is applicable only to **login with username and password**.
+{{% /alert %}}
+
 ## How to enable MFA
 
 Authenticated users can enable MFA through a button in their homepage.
