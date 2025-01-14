@@ -7,8 +7,9 @@ IAM provides a group management system, that can be used by IAM Administrators
 and Group Managers to create groups, remove existing ones and manage membership in the group.
 
 Groups can be organized in a hierarchical structure, with the following constraints:
- - a group can have only a parent group;
- - a group can have many childrens.
+
+* a group can have only a parent group;
+* a group can have many children.
 
 ## Manage groups as IAM Admin
 
@@ -24,7 +25,7 @@ To create a group, specify a group name.
 
 ![INDIGO IAM Root group creation](../images/IAM-groups-02.png)
 
-A new children group can be created from the parent group details page,
+A new child group can be created from the parent group details page,
 clicking on the _Add a subgroup_ button of the _Subgroups_ upper tab.
 
 ![INDIGO IAM Add Subgroup button](../images/IAM-groups-04.png)
@@ -51,11 +52,11 @@ Choose one or more groups and confirm the operation:
 
 ![INDIGO IAM Add group membership](../images/IAM-groups-07.png)
 
-Starting with version 1.7.0, when a user is added as member of the children group `A/B`, IAM
+Starting with version 1.7.0, when a user is added as member of the child group `A/B`, IAM
 takes care of adding them also to the parent group `A` that
 they are not already a members of.  In previous versions this had to be done
 manually by the IAM administrator. Following the same rationale, when a user is
-removed from the parent group `A`, it is also automatically removed from any children groups
+removed from the parent group `A`, it is also automatically removed from any child groups
 (e.g. `A/B`) they are members of.
 
 To remove a user from a group, click the _Remove_ button.
@@ -86,7 +87,7 @@ that lists the groups they are group managers of appears in the homepage.
 Once the Group Manager clicks on a group, what they can see in the upper tabs is
 
 * detailed view of group information (_Group information_)
-* list of children groups, if any (_Subgroups_)
+* list of child groups, if any (_Subgroups_)
 * list of Group Managers (_Managers_)
 * list of group members, if any (_Members_)
 
