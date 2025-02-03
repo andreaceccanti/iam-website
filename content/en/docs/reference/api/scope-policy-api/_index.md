@@ -28,6 +28,11 @@ This behaviour is described in the following picture:
 
 ## Scope policies
 
+{{% alert title="Info" color="info" %}}
+Only **admin** users can delegate clients to use **admin scopes** (`iam:admin.read` and `iam:admin.write`) and **SCIM scopes** (`scim:read` and `scim:write`).
+Scope policies that allow normal users to obtain access tokens with these privileged/restricted scopes will have no effect!
+{{% /alert %}}
+
 IAM Scope policies provide a mechanism to control access to OAuth
 scopes. A scope policy defines:
 

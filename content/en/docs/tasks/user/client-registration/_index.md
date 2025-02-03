@@ -43,6 +43,10 @@ want to request refresh tokens for the client being created:
 
 ![client reg](../images/new-client-reg-3.png)
 
+{{% alert title="Info" color="info" %}}
+Restricted scopes can only be assigned to clients by admin users. As for the **admin** (`iam:admin.read` and `iam:admin.write`) and **SCIM** (`scim:read` and `scim:write`) scopes, only admin users can delegate clients to use them. _Client credentials_ clients may obtain access tokens with these privileged/restricted scopes if and only if they have been previously assigned by the administrator.
+{{% /alert %}}
+
 You can then click the __Save__ button at the bottom of the page:
 
 ![client reg](../images/new-client-reg-4.png)
