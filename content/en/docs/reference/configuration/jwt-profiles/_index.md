@@ -23,7 +23,7 @@ in tokens and responses issued by IAM.
 This mechanism enables integration of the same IAM instance with resources
 relying on different profiles.
 
-IAM currently supports three JWT profiles:
+IAM currently supports four JWT profiles:
 
 - the `iam` profile
 - the `wlcg` WLCG profile 
