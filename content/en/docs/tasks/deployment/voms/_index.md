@@ -120,11 +120,11 @@ voms:
     use-legacy-fqan-encoding: ${VOMS_AA_USE_LEGACY_FQAN_ENCODING:true}
 ```
 
-To map this file (in the example below, `voms-aa.yml`as `/workspace/config/application.yml`, you
-typically need to add the following volume definition the VOMS AA section of your Podman/Docker
+To map this file (in the example below, `voms-aa.yml`as `/workspace/config/application.yml`), you
+typically need to add the following volume definition to the VOMS AA section of your Podman/Docker
 compose file:
 
-```
+```yaml
         volumes:
             - /path/to/voms-aa.yml:/workspace/config/application.yml:ro,Z
 ```
@@ -137,10 +137,10 @@ private key, as described below.
 ### Configuration of EGI trust anchors and VOMS AA certificate
 
 Both the VOMS-enabled NGINX service and the VOMS AA service require the proper configuration
-of the container the certificate and private key to use and the EGI trust anchors. If using
-Podman/Docker Compose, itt is typically done with:
+of the container, the certificate and private key to use and the EGI trust anchors. If using
+Podman/Docker Compose, it is typically done with:
 
-```
+```yaml
         volumes:
             - /path/to/certs/voms.test.example.cert.pem:/certs/hostcert.pem:ro,Z
             - /path/to/certs/voms.test.example.cert.key:/certs/hostkey.pem:ro,Z
@@ -151,7 +151,7 @@ The line to map EGI trust anchor may be different if you use [EGI trust anchors]
 container. See the Podman/Docker Compose example for more information.
 
 Note that the private key must be readable by the user running the service. As it is not a good
-practice to make it world readable, it may be necessary to adjust its owner.
+practice to make it world readable, it may be necessary to adjust its ownership.
 
 ### Podman/Docker Compose example
 
