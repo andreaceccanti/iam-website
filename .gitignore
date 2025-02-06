@@ -4,3 +4,6 @@ resources/
 node_modules/
 tech-doc-hugo
 .hugo_build.lock
+
+# IDE-specific directories
+.idea/
