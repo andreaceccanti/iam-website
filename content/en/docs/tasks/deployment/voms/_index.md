@@ -70,7 +70,7 @@ following variables:
 
 - `VOMS_AA_HOST`: host name used to access the VOMS AA service
 - `VOMS_AA_PORT` VOMS AA port
-- `VOMS_AA_V0`: VO served by the VOMS AA service
+- `VOMS_AA_VO`: VO served by the VOMS AA service
 
 You also need to create a VOMS AA YAML configuration file with the content below (its content should
 be generic as it relies on standard environment variables used to configure the login service) and map it
